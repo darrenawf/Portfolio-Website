@@ -1,0 +1,17 @@
+* {
+    font-family: 'Lilita One', cursive;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome,
+.about {
+    margin: 10px 0;
+}
+
+.welcome {
+    font-size: 30px;
+}
