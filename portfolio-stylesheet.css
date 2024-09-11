@@ -2,16 +2,54 @@
     font-family: 'Lilita One', cursive;
 }
 
+body {
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    overflow-y: scroll;
+}
+
+.darkLightMode {
+    width: 8vw;
+    height: auto;
+    position: absolute;
+    right: 3vw;
+    top: 3vw;
+}
+
+.darkLightMode:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+
+
 .profile {
     display: flex;
     flex-direction: column;
-}
-
-.welcome,
-.about {
-    margin: 10px 0;
+    /*color: rgb(218, 223, 223);*/
+    color: rgb(218, 223, 223);
+    /*border: black solid 1px;*/
+    margin: 7vw 15vw 0 15vw;
 }
 
 .welcome {
-    font-size: 30px;
+    font-size: 9vw;
+}
+
+.about {
+    font-size: 3vw;
+}
+
+.signProjects {
+    width: 15vw;
+    height: auto;
+    margin-left: 62.5vw;
+    margin-top: 4vw;
+}
+
+footer {
+    color: white;
+    position: absolute;
+    bottom: 1vw;
 }
