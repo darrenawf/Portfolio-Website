@@ -9,7 +9,7 @@ body {
     background-attachment: scroll;
     background-position: absolute;
     overflow-y: scroll;
-    min-height: 150vw;
+    min-height: 157.5vw;
     background-size: 100%;
 }
 
@@ -47,8 +47,8 @@ body {
 .signProjects {
     width: 15vw;
     height: auto;
-    margin-left: 62.5vw;
-    margin-top: 4vw;
+    margin-left: 62vw;
+    margin-top: 3.5vw;
 }
 
 footer {
