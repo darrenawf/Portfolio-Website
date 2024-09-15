@@ -49,6 +49,7 @@ body {
     height: auto;
     margin-left: 62vw;
     margin-top: 3.5vw;
+    display: none;
 }
 
 footer {
