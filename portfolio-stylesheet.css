@@ -7,10 +7,13 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    background-position: absolute;
-    overflow-y: scroll;
-    min-height: 157.5vw;
-    background-size: 100%;
+    background-position: top center;
+    overflow-y: auto;
+    min-height: 163.5vw;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .darkLightMode {
@@ -44,16 +47,62 @@ body {
     font-size: 3vw;
 }
 
-.signProjects {
-    width: 15vw;
-    height: auto;
-    margin-left: 62vw;
-    margin-top: 3.5vw;
-    display: none;
-}
-
 footer {
     color: white;
     position: absolute;
     bottom: 1px;
+}
+
+.project1Logo {
+    position: absolute;
+    border: 1px red solid;
+    width: 14vw;
+    height: 14vw;
+    left: 22.7vw;
+    top: 52.6vw;
+    border-radius: 50%;
+}
+
+.project1Logo:hover {
+    cursor: pointer;
+}
+
+.popUpBackground {
+z-index: 5;
+}
+
+.popUpBox {
+    display: none;
+    position: fixed;
+    border: #202020 10px double;
+    background-color: rgb(180, 180, 180);
+    border-radius: 10px;
+    z-index: 10;
+    top: 8vh;
+    bottom: 8vh;
+    left: 8vw;
+    right: 8vw;
+}
+
+.popUpBackground {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.popUpClose {
+    position: absolute;
+    background-color: rgb(227, 64, 64, 0.5);
+    width: 40px;
+    height: 30px;
+    right: 0px;
+}
+
+.popUpClose:hover {
+    cursor: pointer;
+    background-color: rgb(227, 64, 64);
 }
