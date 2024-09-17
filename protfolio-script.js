@@ -1,4 +1,4 @@
-function project1(){
+function popUpOpen(){
     document.getElementById("popUpBox").style.display = "block";
     document.getElementById("popUpBackground").style.display = "block";
     document.body.style.overflowY = "hidden"; 

@@ -33,9 +33,7 @@ body {
 .profile {
     display: flex;
     flex-direction: column;
-    /*color: rgb(218, 223, 223);*/
     color: rgb(218, 223, 223);
-    /*border: black solid 1px;*/
     margin: 7vw 15vw 0 15vw;
 }
 
@@ -66,15 +64,29 @@ footer {
     cursor: pointer;
 }
 
+.project2Logo {
+    position: absolute;
+    width: 14vw;
+    height: 16vw;
+    left: 11.3vw;
+    top: 115vw;
+    border-radius: 50%;
+}
+
+.project2Logo:hover {
+    cursor: pointer;
+}
+
 .popUpBackground {
-z-index: 5;
+    z-index: 5;
 }
 
 .popUpBox {
-    display: none;
+    display: block;
     position: fixed;
-    border: #202020 10px double;
-    background-color: rgb(180, 180, 180);
+    border: rgb(9, 11, 16) 5px solid;
+    background-color: rgb(24, 27, 31);
+    /*background-color: rgb(44, 49, 59);*/
     border-radius: 10px;
     z-index: 10;
     top: 8vh;
@@ -84,24 +96,40 @@ z-index: 5;
 }
 
 .popUpBackground {
-    display: none;
+    display: block;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(9, 11, 16, 0.5);
     top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
 }
 
+.navBar {
+    display: block;
+    background-color: rgb(18, 19, 25);
+    height: 50px;
+    border-bottom:rgb(128, 135, 142) 1px solid;
+}
+
 .popUpClose {
     position: absolute;
-    background-color: rgb(227, 64, 64, 0.5);
-    width: 40px;
-    height: 30px;
+    border-left: rgb(128, 135, 142) 1px solid;
+    /*background-color: rgb(227, 64, 64, 0.5);*/
+    width: 60px;
+    height: 50px;
     right: 0px;
 }
 
 .popUpClose:hover {
     cursor: pointer;
-    background-color: rgb(227, 64, 64);
+    background-color: rgb(180, 32, 45);
+}
+
+.popUpBody {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: rgb(218, 223, 223);
+    margin: 10px;
 }
