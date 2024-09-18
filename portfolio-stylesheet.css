@@ -38,7 +38,7 @@ body {
 }
 
 .projects .project1Logo,
-.projects .project2Logo {
+.projects .project3Logo {
     position: absolute;
     width: 14vw;
     height: 14vw;
@@ -51,14 +51,15 @@ body {
     top: 52.6vw;
 }
 
-.project2Logo {
+.project3Logo {
     left: 11.3vw;
     top: 115vw;
 }
 
 .popUpBackground,
 .popUpBox {
-    display: block;
+    display: none;
+    /*Hides pop up window on load*/
     position: fixed;
     top: 0;
     bottom: 0;
@@ -84,10 +85,44 @@ body {
 }
 
 .navBar {
-    display: block;
+    display: flex;
     background-color: rgb(210, 215, 225);
     height: 50px;
     z-index: 1;
+    align-items: center;
+}
+
+.tabContainer {
+    display: inline-flex;
+    gap: 10px;
+    margin: 1px 85px 0 25px;
+    width: 100%;
+}
+
+.tab {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgb(200, 205, 215);
+    padding: 1px 12px 0px 8px;
+    border: rgb(200, 205, 215) 3px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 12%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tab::after {
+    /*Fade for tab text*/
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(200, 205, 215, 0) 0%, rgba(200, 205, 215, 1) 100%);
 }
 
 .popUpClose {
@@ -96,6 +131,7 @@ body {
     height: 50px;
     right: 0;
     font-family: 'Poppins', sans-serif;
+    background-color: rgb(210, 215, 225);
 }
 
 .popUpClose:hover {
@@ -167,7 +203,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     height: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .popUpImage {
@@ -186,7 +222,7 @@ body {
     white-space: nowrap;
 }
 
-.popUpImageGallery button{
+.popUpImageGallery button {
     background-color: rgb(200, 205, 215);
     border: none;
     border-radius: 50%;
@@ -203,6 +239,7 @@ body {
     border: none;
     border-radius: 10px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 /* SCREEN ADJUST --------------------------------------------- */
