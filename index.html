@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio-stylesheet.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="protfolio-script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="protfolio-script.js" defer></script>
     <title>Darren Drew • Portfolio</title>
     <link rel="icon" type="image/x-icon" href="#">
 </head>
 
 <body>
     <div class="background">
-
-        <img class="darkLightMode" src="images/moon.png">
+        <img class="darkLightMode" src="images/moon.png" alt="Dark/Light Mode Toggle">
 
         <span class="profile">
-            <span class="welcome">
-                Welcome
-            </span>
+            <span class="welcome">Welcome</span>
             <span class="about">
                 I'm Darren Drew • An aspiring web developer and student at York University living in Toronto, ON
             </span>
         </span>
+
         <span class="projects">
             <span class="project1Logo" onclick="popUpOpen()"></span>
             <span class="project2Logo" onclick="popUpOpen()"></span>
         </span>
+
         <div id="popUpBackground" class="popUpBackground"></div>
         <div id="popUpBox" class="popUpBox">
             <div class="popUpContent">
@@ -35,24 +36,39 @@
                 </span>
                 <div class="popUpBody">
                     <div class="popUpBodyLeft">
-                        <span class="popUpTitle">Monkeypedia<a href="https://github.com/darrenawf/Monkeypedia-BETA"
-                                target="_blank"><img class="popUpTitleIcon" src="images/githubIcon.png"></a></span>
-                        <div class="popUpImageContainer">
-                            <img class="popUpImage" src="images/monkeypedia/page1.png">
-                            <div class="popUpImageSideBar">
-                                <img class="popUpImageSideBarImages top" src="images/monkeypedia/page1.png">
-                                <img class="popUpImageSideBarImages" src="images/monkeypedia/page2.png">
-                                <img class="popUpImageSideBarImages bottom" src="images/monkeypedia/page3.png">
-                            </div>
+                        <span class="popUpTitle">
+                            Monkeypedia
+                            <a href="https://github.com/darrenawf/Monkeypedia-BETA" target="_blank">
+                                <img class="popUpTitleIcon" src="images/githubIcon.png" alt="GitHub Icon">
+                            </a>
+                        </span>
+                        <span class="popUpParagraph">
+                            Lorem ipsum banana dolor sit amet, macaque adipiscing elit.
+                            Curabitur sapien gorilla, viverra monkey lobortis baboon, fringilla orangutan leo.
+                            Pellentesque habitant simia tristique senectus et netus et sapien felis. Ape purus at nisl
+                            fringilla, in eleifend sapien congue. Curabitur rhoncus banana bibendum turpis fringilla
+                            chimpanzee. Nulla facilisi morbi spider ipsum arcu at sapien. Suspendisse potenti. Monkey
+                            convallis gorilla arcu, ac tincidunt sapien congue in. Vivamus coconut justo sapien,
+                            ultricies ac monkeys et, fermentum spider leo. Phasellus at nulla baboon fringilla viverra
+                            turpis sapien. Donec pellentesque felis banana at sapien vehicula fermentum
+                            felis viverra leo. Ut monkey orci felis, viverra sapien fermentum leo pulvinar. Nullam in
+                            felis sapien viverra leo pulvinar fermentum felis monkey. 
+                        </span>
+                    </div>
+                    <div class="popUpBodyRight">
+                        <img class="popUpImage" src="images/monkeypedia/page2.png" alt="Monkeypedia Page">
+                        <div class="popUpImageGallery">
+                            <button onclick="galleryLeft()">&lt;</button>
+                            <img class="galleryImage one" src="images/monkeypedia/page1.png" alt="Monkeypedia Page">
+                            <img class="galleryImage two" src="images/monkeypedia/page2.png" alt="Monkeypedia Page">
+                            <img class="galleryImage three" src="images/monkeypedia/page3.png" alt="Monkeypedia Page">
+                            <button onclick="galleryRight()">&gt;</button>
                         </div>
                     </div>
-                    <!--<span class="popUpParagraph">Monkeypedia is a very cool website</span>-->
                 </div>
             </div>
         </div>
-        <footer>
-            <span></span>
-        </footer>
+        <footer></footer>
     </div>
 </body>
 

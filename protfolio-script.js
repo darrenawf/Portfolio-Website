@@ -9,3 +9,11 @@ function popUpClose(){
     document.getElementById("popUpBackground").style.display = "none";
     document.body.style.overflowY = "scroll"; 
 }
+
+function galleryLeft(){
+
+}
+
+function galleryRight(){
+    
+}

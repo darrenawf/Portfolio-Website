@@ -3,22 +3,15 @@
 }
 
 body {
-    background-image: url("images/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-    background-position: top center;
-    overflow-y: auto;
+    background: url("images/background.png") no-repeat center top / cover;
     min-height: 163.5vw;
     margin: 0;
     padding: 0;
-    position: absolute;
-    z-index: -1;
+    overflow-y: auto;
 }
 
 .darkLightMode {
     width: 8vw;
-    height: auto;
     position: absolute;
     right: 3vw;
     top: 3vw;
@@ -28,7 +21,6 @@ body {
     filter: brightness(1.2);
     cursor: pointer;
 }
-
 
 .profile {
     display: flex;
@@ -45,78 +37,64 @@ body {
     font-size: 3vw;
 }
 
-footer {
-    color: white;
-    position: absolute;
-    bottom: 1px;
-}
-
-.project1Logo {
+.projects .project1Logo,
+.projects .project2Logo {
     position: absolute;
     width: 14vw;
     height: 14vw;
-    left: 22.7vw;
-    top: 52.6vw;
     border-radius: 50%;
+    cursor: pointer;
 }
 
-.project1Logo:hover {
-    cursor: pointer;
+.project1Logo {
+    left: 22.7vw;
+    top: 52.6vw;
 }
 
 .project2Logo {
-    position: absolute;
-    width: 14vw;
-    height: 16vw;
     left: 11.3vw;
     top: 115vw;
-    border-radius: 50%;
 }
 
-.project2Logo:hover {
-    cursor: pointer;
+.popUpBackground,
+.popUpBox {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .popUpBackground {
-    display: block;
-    /*display: block;*/
-    position: fixed;
-    background-color: rgb(9, 11, 16, 0.5);
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    background-color: rgba(9, 11, 16, 0.5);
     z-index: 5;
 }
 
 .popUpBox {
-    display: block;
-    /*display: block;*/
-    position: fixed;
-    background-color: rgb(210, 215, 225);
-    border: rgb(9, 11, 16) 5px solid;
+    background-color: rgb(200, 205, 215);
+    border: 5px solid rgb(9, 11, 16);
     border-radius: 15px;
-    z-index: 10;
     top: 8vh;
     bottom: 8vh;
     left: 8vw;
     right: 8vw;
+    z-index: 10;
     overflow: hidden;
 }
 
 .navBar {
     display: block;
-    background-color: rgb(200, 205, 215);
-    border-bottom: rgb(9, 11, 16) 2px solid;
+    background-color: rgb(210, 215, 225);
     height: 50px;
+    z-index: 1;
 }
 
 .popUpClose {
     position: absolute;
-    /*border-left: rgb(9, 11, 16) 1px solid;*/
     width: 60px;
     height: 50px;
-    right: 0px;
+    right: 0;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -148,81 +126,104 @@ footer {
 
 .popUpBody {
     display: flex;
-    position: absolute;
-    margin-left: 10px;
-    margin-top: 10px;
+    padding-top: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 8vh - 8vh - 50px - 30px);
 }
 
-.popUpImageContainer{
-    display: flex;
-    flex: 1;
-    margin-top: 5px;
-}
-
-.popUpImage {
-    height: 400px;
-    width: auto;
-    border-radius: 10px 0 0 10px;
-    border: 2.5px rgb(9, 11, 16) solid;
-}
-
-.popUpImage:hover {
-    cursor: pointer;
+.popUpBodyLeft {
+    margin-left: 25px;
+    background-color: rgb(210, 215, 225);
+    border-radius: 10px;
+    padding: 5px 10px 10px 10px;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
 .popUpTitle {
-    position: block;
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
     color: rgb(9, 11, 16);
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .popUpTitleIcon {
     height: 1em;
     margin-left: 10px;
-    font-weight: 600;
-}
-
-.popUpTitleIcon:hover {
-    cursor: pointer;
 }
 
 .popUpParagraph {
     font-family: 'Poppins', sans-serif;
+    font-size: 16px;
     font-weight: 500;
-    background-color: rgb(153, 157, 163);
 }
 
-.popUpBodyLeft{
-    /*background-color: rgb(188, 190, 190);*/
-    justify-content: space-between;
+.popUpBodyRight {
+    background-color: rgb(210, 215, 225);
+    margin-right: 25px;
+    margin-left: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+    margin-bottom: 20px;
 }
 
-.popUpImageSideBar {
-    align-self: flex-start;
-    display: block;
-    border-right: 3px black solid;
-    border-top: 3px black solid;
-    border-bottom: 3px black solid;
-    border-radius: 0 10px 10px 0;
-    margin-left: auto;
+.popUpImage {
+    width: 600px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.popUpImageSideBarImages{
-    display: block;
-    height: 131.8px;
+.popUpImageGallery {
+    margin-top: 5px;
+    display: flex;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
 }
 
-.popUpImageSideBarImages.top {
-    border-radius: 0 10px 0 0;
-    border-bottom: black 3px solid;
+.popUpImageGallery button{
+    background-color: rgb(200, 205, 215);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: 'Lilita One', cursive;
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    padding: 3px 8px;
 }
 
+.galleryImage {
+    width: 27.5%;
+    border: none;
+    border-radius: 10px;
+    object-fit: cover;
+}
 
-.popUpImageSideBarImages.bottom {
-    border-radius: 0 0 10px 0;
-    border-top: black 3px solid;
+/* SCREEN ADJUST --------------------------------------------- */
+@media screen and (max-width: 1000px) {
+    .popUpBody {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popUpBodyLeft,
+    .popUpBodyRight {
+        margin-left: 0;
+        margin-right: 0;
+        width: 90%;
+    }
+
+    .popUpBodyRight {
+        margin-bottom: 20px;
+    }
+
+    .popUpImage {
+        width: 100%;
+    }
 }
