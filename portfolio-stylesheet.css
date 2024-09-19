@@ -267,4 +267,9 @@ body {
     .popUpImage {
         width: 100%;
     }
+
+    .tabContainer {
+        gap: 8px;
+        margin: 1px 85px 0px 3.5%;
+    }
 }
