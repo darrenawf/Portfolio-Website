@@ -5,21 +5,6 @@ titleArr = ["Monkeypedia", "eCommerce", "Conathon's Casino", "Java Games"];
 let currentImageIndex = 0;
 
 function tab(num) { //Changes content to selected tab
-    //Fetch paragraph data for each tab
-    fetch("portfolio-data.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Update the paragraph
-            document.querySelector(".popUpParagraph").textContent = data.paragraphs[num - 1];
-        })
-        .catch(error => {
-            document.querySelector(".popUpParagraph").textContent = "Failed to load content";
-        });
     //Define Arrays for each tab
     linkArr = [["https://github.com/darrenawf/Monkeypedia-BETA"], [""], ["https://github.com/darrenawf/ConathonsCasino"], ["https://github.com/darrenawf/Dino-Game", "https://github.com/darrenawf/Flap-Burd"]];
     //Set colour for closed tab
